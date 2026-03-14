@@ -1,8 +1,13 @@
-describe('LOGIN', ()=>{
-it('verify sign up with valid credentials', ()=> {
+describe('Signup Test - Generate Random Email', () => {
+
+it('should signup with a new email each time', () => {
+
+const randomEmail = `user${Date.now()}@mail.com`
+
 cy.visit('https://automationexercise.com/login')
-cy.get('[data-qa="signup-name"]').type('young')
-cy.get('[data-qa="signup-email"]').type('mine@hee.com')
+
+cy.get('[data-qa="signup-name"]').type('Elijah')
+cy.get('[data-qa="signup-email"]').type(randomEmail)
 cy.get('[data-qa="signup-button"]').click()
 cy.get('.clearfix > :nth-child(3)').click()
 cy.get('[data-qa="password"]').type('elijah1234')
@@ -12,7 +17,7 @@ cy.get('[data-qa="months"]').select('May')
 cy.get('[data-qa="years"]').select('1990')
 cy.get('[data-qa="first_name"]').type('Elijah')
 cy.get('[data-qa="last_name"]').type('Hee')
-cy.get('[data-qa="company"]').type('Helihjah')
+cy.get('[data-qa="company"]').type('Helihjah Company')
 cy.get('[data-qa="address"]').type('1, Ayobo street, Ishefun')
 cy.get('[data-qa="address2"]').type('Ipaja-Ayobo')
 cy.get('[data-qa="country"]').select('United States')
@@ -23,7 +28,7 @@ cy.get('[data-qa="mobile_number"]').type('09097957017')
 cy.get('[data-qa="create-account"]').click()
 cy.get('[data-qa="continue-button"]').click()
 
-}) 
+  })
 
 it('verify login with valid credentials', ()=> {
 cy.visit('https://automationexercise.com/login')
@@ -53,6 +58,5 @@ cy.get('[data-qa="pay-button"]').click()
 cy.get('[data-qa="continue-button"]').click()
 
 })
-
 
 })
