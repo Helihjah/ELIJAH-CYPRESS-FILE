@@ -2,10 +2,9 @@ describe('Signup Test - Generate Random Email', () => {
 
 it('should signup with a new email each time', () => {
 
-const randomEmail = `user${Date.now()}@mail.com`
+const randomEmail = `elijah${Date.now()}@mail.com`
 
 cy.visit('https://automationexercise.com/login')
-
 cy.get('[data-qa="signup-name"]').type('Elijah')
 cy.get('[data-qa="signup-email"]').type(randomEmail)
 cy.get('[data-qa="signup-button"]').click()
@@ -20,7 +19,7 @@ cy.get('[data-qa="last_name"]').type('Hee')
 cy.get('[data-qa="company"]').type('Helihjah Company')
 cy.get('[data-qa="address"]').type('1, Ayobo street, Ishefun')
 cy.get('[data-qa="address2"]').type('Ipaja-Ayobo')
-cy.get('[data-qa="country"]').select('United States')
+cy.get('[data-qa="country"]').select('India')
 cy.get('[data-qa="state"]').type('Lagos')
 cy.get('[data-qa="city"]').type('Ayobo')
 cy.get('[data-qa="zipcode"]').type('234')
@@ -56,7 +55,6 @@ cy.get('[data-qa="expiry-month"]').type('05')
 cy.get('[data-qa="expiry-year"]').type('1990')
 cy.get('[data-qa="pay-button"]').click()
 cy.get('[data-qa="continue-button"]').click()
-
 
 })
 
