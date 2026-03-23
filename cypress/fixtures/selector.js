@@ -20,7 +20,7 @@ export const elements = {
     "zipcode": '234',
     "phonenumber": '90656578901',
     "ssn": '232365442',
-    "customerusername":'Makanaki10',
+    "customerusername":'Makanak10',
     "customerpassword":'testing1',
     "repeatedpassword":'testing1',
     "submitField": '[colspan="2"] > .button',
