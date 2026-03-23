@@ -27,8 +27,8 @@ export const elements = {
     "usernameField": '[name="username"]',
     "passwordField": '[name="password"]',
     "loginbuttonField": ':nth-child(5) > .button',
-    "username": 'Young',
-    "password": 'Hee',
+    "username": 'Makanaki10',
+    "password": 'testing1',
     
 
 }
