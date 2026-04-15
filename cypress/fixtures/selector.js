@@ -20,15 +20,20 @@ export const elements = {
     "zipcode": '234',
     "phonenumber": '90656578901',
     "ssn": '232365442',
-    "customerusername":'Makanak10',
+    "customerusername":'Makanak90',
     "customerpassword":'testing1',
     "repeatedpassword":'testing1',
     "submitField": '[colspan="2"] > .button',
     "usernameField": '[name="username"]',
     "passwordField": '[name="password"]',
     "loginbuttonField": ':nth-child(5) > .button',
-    "username": 'Makanak10',
+    "username": 'Makanak90',
     "password": 'testing1',
-    
 
+
+  signupNameField: '[data-qa="signup-name"]',
+  signupEmailField: '[data-qa="signup-email"]',
+  signupButton: '[data-qa="signup-button"]'
 }
+
+
