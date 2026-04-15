@@ -4,7 +4,7 @@ describe('signup',()=>{
         cy.visit('/')
 
 })    
-it('registration flow',()=>{
+it.only('registration flow',()=>{
 cy.get(elements.registerbuttonField).should('be.visible').click()
 cy.get(elements.firstNameField).should('be.visible').and('be.empty').type(elements.firstName)
 cy.get(elements.lastNameField).should('be.visible').and('be.empty').type(elements.lastName)
@@ -20,7 +20,7 @@ cy.get(elements.repeatedpasswordField).should('be.visible').and('be.empty').type
 cy.get(elements.submitField).should('be.visible').and('be.empty').click()
 
 })
-it('login flow',()=> {
+it.only('login flow',()=> {
 cy.get(elements.usernameField).should('be.visible').and('be.empty').type(elements.username)
 cy.get(elements.passwordField).should('be.visible').and('be.empty').type(elements.password)
 cy.get(elements.loginbuttonField).should('be.visible').click()

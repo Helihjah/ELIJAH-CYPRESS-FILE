@@ -1,0 +1,61 @@
+describe('Signup Test - Generate Random Email', () => {
+
+it('should signup with a new email each time', () => {
+
+const randomEmail = `elijah${Date.now()}@mail.com`
+
+cy.visit('https://automationexercise.com/login')
+cy.get('[data-qa="signup-name"]').type('Elijah').should('be.visible')
+cy.get('[data-qa="signup-email"]').type(randomEmail).should('be.visible')
+cy.get('[data-qa="signup-button"]').click().should('be.visible')
+cy.get('.clearfix > :nth-child(3)').click().should('be.visible')
+cy.get('[data-qa="password"]').type('elijah1234').should('be.visible')
+cy.get(':nth-child(6) > .row > :nth-child(1)').click().should('be.visible')
+cy.get('[data-qa="days"]').select('5').should('be.visible')
+cy.get('[data-qa="months"]').select('May').should('be.visible')
+cy.get('[data-qa="years"]').select('1990').should('be.visible')
+cy.get('[data-qa="first_name"]').type('Elijah').should('be.visible')
+cy.get('[data-qa="last_name"]').type('Hee').should('be.visible')
+cy.get('[data-qa="company"]').type('Helihjah Company').should('be.visible')
+cy.get('[data-qa="address"]').type('1, Ayobo street, Ishefun').should('be.visible')
+cy.get('[data-qa="address2"]').type('Ipaja-Ayobo').should('be.visible')
+cy.get('[data-qa="country"]').select('United States').should('be.visible')
+cy.get('[data-qa="state"]').type('Lagos').should('be.visible')
+cy.get('[data-qa="city"]').type('Ayobo').should('be.visible')
+cy.get('[data-qa="zipcode"]').type('234').should('be.visible')
+cy.get('[data-qa="mobile_number"]').type('09097957017').should('be.visible')
+cy.get('[data-qa="create-account"]').click().should('be.visible')
+cy.get('[data-qa="continue-button"]').click().should('be.visible')
+
+  })
+
+it('verify login with valid credentials', ()=> {
+cy.visit('https://automationexercise.com/login')
+cy.get('[data-qa="login-email"]').type('mine@hee.com').should('be.visible')
+cy.get('[data-qa="login-password"]').type('elijah1234').should('be.visible')
+cy.get('[data-qa="login-button"]').click().should('be.visible')
+cy.get('.features_items > :nth-child(3) > .product-image-wrapper > .single-products > .productinfo > .btn')
+.click({ force: true }).should('be.visible')
+cy.get(':nth-child(4) > .product-image-wrapper > .single-products > .productinfo > .btn')
+.click({ force: true }).should('be.visible')
+cy.get(':nth-child(7) > .product-image-wrapper > .single-products > .productinfo > .btn')
+.click({ force: true }).should('be.visible')
+cy.get(':nth-child(9) > .product-image-wrapper > .single-products > .productinfo > .btn')
+.click({ force: true }).should('be.visible')
+cy.get(':nth-child(10) > .product-image-wrapper > .single-products > .productinfo > .btn')
+.click({ force: true }).should('be.visible') 
+cy.get('u').click().should('be.visible')  
+cy.get('.col-sm-6 > .btn').click().should('be.visible')
+cy.get('[name="message"]').type('Thank you for shopping boss').should('be.visible')
+cy.get(':nth-child(7) > .btn').click().should('be.visible')
+cy.get('[data-qa="name-on-card"]').type('Elijah Young').should('be.visible')
+cy.get('[data-qa="card-number"]').type('1234567890').should('be.visible')
+cy.get('[data-qa="cvc"]').type('009').should('be.visible')
+cy.get('[data-qa="expiry-month"]').type('05').should('be.visible')
+cy.get('[data-qa="expiry-year"]').type('1990').should('be.visible')
+cy.get('[data-qa="pay-button"]').click().should('be.visible')
+cy.get('[data-qa="continue-button"]').click().should('be.visible')
+
+})
+
+})
